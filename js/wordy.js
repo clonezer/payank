@@ -224,6 +224,10 @@ var tailingVowels = [
                 {
                   "name": "โอะ",
                   "components": ["fc", tone, "lc"]                   
+                },
+                {
+                  "name": "ออ",
+                  "components": ["fc", tone, "อ", "lc"]                   
                 }
         
               ];
