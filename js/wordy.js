@@ -3,7 +3,7 @@ var tone = "([่-๋])?";
 
 var firstConsonants = [
     {
-      "pattern": "([กฉสผถตขจ][งญนมยรลว])",
+      "pattern": "([ฉสผถตขจ][งญนมยรลว])",
       "group": "อักษรนำ 2 พยางค์"                   
     },
     {
@@ -302,8 +302,8 @@ function getFirstConsonant(fc) {
     return "ซ";
   }else if (fc.match("([จซศส])ร")) { //ควบกล้ำไม่แท้
     return fc.match("([จซศส])ร")[1];
-  }else if (fc.match("([กฉสผถตขจ])([งญนมยรลว])")) { //อักษรนำ 2 พยางค์
-    return "ห" + fc.match("([กฉสผถตขจ])([งญนมยรลว])")[2];
+  }else if (fc.match("([ฉสผถตขจ])([งญนมยรลว])")) { //อักษรนำ 2 พยางค์
+    return "ห" + fc.match("([ฉสผถตขจ])([งญนมยรลว])")[2];
   }else {
     return fc;
   }
