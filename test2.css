@@ -3,6 +3,7 @@
   width: 890px;
   table-layout: fixed;
   border-collapse: collapse;
+  -webkit-overflow-scrolling: touch;
 }
 .fixed_headers th,
 .fixed_headers td {
