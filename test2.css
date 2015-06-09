@@ -7,12 +7,12 @@
 }
 .fixed_headers th,
 .fixed_headers td {
-  border-left: 1px solid #000000;
+  border-left: thin dotted gray;
+  border-bottom: thin dotted gray;
   padding: 5px;
   text-align: left;
 }
 .fixed_headers th {
-  border: 1px solid #000000;
   text-align: center;
   font-size: 11pt;
 }
@@ -56,7 +56,7 @@
   display: block;
   overflow: auto;
   width: 100%;
-  height: 400px;
+  height: 450px;
 }
 .fixed_headers tbody tr:nth-child(odd) {
   background-color: #f5f3ed;
