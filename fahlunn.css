@@ -1,0 +1,7 @@
+header {
+
+	background: url(https://fahlunn.com/fl_img/Fahlunn-02.jpg);
+    background-size:   cover;                      /* <------ */
+    background-repeat: no-repeat;
+    background-position: center center;  
+}

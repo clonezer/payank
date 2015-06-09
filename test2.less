@@ -1,0 +1,66 @@
+@header_background_color: #d7d2c6;
+@header_text_color: #000000;
+@odd_row_background_color: #f5f3ed;
+@even_row_background_color: #fffffb;
+
+@table_width: 890px;
+@table_body_height: 400px;
+@column_1_width: 90px;
+@column_2_width: 100px;
+@column_3_width: 100px;
+@column_4_width: 100px;
+@column_5_width: 100px;
+@column_6_width: 100px;
+@column_7_width: 100px;
+@column_8_width: 100px;
+@column_9_width: 100px;
+
+.fixed_headers {
+  width: @table_width;
+  table-layout: fixed;
+  border-collapse: collapse;
+  
+  th, td {
+    border-left: 1px solid #000000;
+    padding: 5px;
+    text-align: left;
+  }
+  
+  th {
+    border: 1px solid #000000;
+    text-align: center;
+    font-size: 11pt;
+  }  
+  
+  td:nth-child(1), th:nth-child(1) { width: @column_1_width; }
+  td:nth-child(2), th:nth-child(2) { width: @column_2_width; }
+  td:nth-child(3), th:nth-child(3) { width: @column_3_width; }
+  td:nth-child(4), th:nth-child(4) { width: @column_4_width; }
+  td:nth-child(5), th:nth-child(5) { width: @column_5_width; }
+  td:nth-child(6), th:nth-child(6) { width: @column_6_width; }
+  td:nth-child(7), th:nth-child(7) { width: @column_7_width; }
+  td:nth-child(8), th:nth-child(8) { width: @column_8_width; }  
+  td:nth-child(9), th:nth-child(9) { width: @column_9_width; }    
+  
+  tbody {
+    display: block;
+    overflow: auto;
+    width: 100%;
+    height: @table_body_height;
+    tr:nth-child(odd) {
+      background-color: @odd_row_background_color;
+    }    
+    tr:nth-child(even) {
+      background-color: @even_row_background_color;
+    }
+  }
+  
+  thead, tfoot {
+    background-color: @header_background_color;
+    color: @header_text_color;
+    tr {
+      display: block;
+      position: relative;
+    }
+  }
+}

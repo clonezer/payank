@@ -333,6 +333,78 @@ function findTone(toneChar) {
   }
 }
 
+function isLastConsonantIn(wordComp, array) {
+  for (var i = 0; i < array.length; i++) {
+    if (wordComp.lastConsonantGroup == array[i]) {
+      return true;
+    }
+  }
+  return false;
+}
+
+function isVowelIn(wordComp, array) {
+  for (var i = 0; i < array.length; i++) {
+    if (wordComp.vowel == array[i]) {
+      return true;
+    }
+  }
+  return false;  
+}
+
+// verse function
+
+function isDeadWord(wordComp) {
+  //คำตาย
+  if(isLastConsonantIn(wordComp, ["แม่ กก", "แม่ กบ", "แม่ กด", "แม่ ก กา"])) {
+    if (isVowelIn(wordComp, ["อะ", "อิ", "อึ", "อุ", "เอียะ", "เอะ", "แอะ", "เออะ", "โอะ", "อัวะ", "เอาะ"])) {
+      return true;
+    }  
+  }
+
+  return false;  
+}
+
+function isAliveWord(wordComp) {
+  //คำเป็น
+  if(isLastConsonantIn(wordComp, ["แม่ กง", "แม่ กน", "แม่ กม", "แม่ เกย", "แม่ เกอว"])) {
+    if (isVowelIn(wordComp, ["อา", "อี", "อื", "อู", "เอีย", "เอ", "แอ", "เออ", "โอ", "อัว", "เอา", "ไอ", "ใอ"])) {
+      return true;
+    }  
+  }
+
+  return false;  
+}
+
+function isFirstToneWord(wordComp) {
+  //คำเอก
+  if (wordComp.tone == "เอก") {
+    return true;
+  }
+  
+  return false;
+}
+
+function isSecondaryToneWord(wordComp) {
+  //คำโท
+  if (wordComp.tone == "โท") {
+    return true;
+  }
+  
+  return false;  
+}
+
+function isRhyme(wordComp1, wordComp2) {
+  //สัมผัส
+  if (wordComp1.vowel == wordComp2.vowel) {
+    if (wordComp1.lastConsonantGroup == wordComp2.lastConsonantGroup) {
+        return true;
+    }
+  }
+  
+  return false;
+}
+
+
 function analyzeWord() {
 
   var word = document.getElementById("wordTextField").value;
@@ -349,7 +421,7 @@ function analyzeWord() {
 
   var resultDiv = document.createElement('div');
   resultDiv.id = 'result';
-  resultDiv.className = 'col-lg-3 col-lg-offset-4';
+  resultDiv.className = 'col-lg-3 col-lg-offset-4 result';
   document.getElementsByTagName('body')[0].appendChild(resultDiv);
 
   var resultP = document.createElement('p');

@@ -5,13 +5,22 @@
  <style type="text/css">
 
  .spreadsheet {
-   border-collapse: collapse;
-   /*               border: 1px dotted;*/
-
+  border-collapse: collapse;   
+  background-color: white;
+  width: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
  }
+     
  .spreadsheet thead {
-   ;
+  border-color: inherit;
+  background-color: #d7d2c6;
  }
+     
+.spreadsheet tfoot {
+    background-color: #d7d2c6;
+}
+     
  .spreadsheet th {
   color: black;
   font-family: DBHelvethaicaX-55Regular;
@@ -19,14 +28,7 @@
   padding: 10px 5px 10px 5px;
   border-right: 1px dotted darkgray;
 }
-
-.spreadsheet tfoot {
- background-color: #d7d2c6;
-}
-
-.spreadsheet th {
-  background-color: #d7d2c6;
-}
+     
 .spreadsheet td {
  text-align: center;
  font-family: gotham;
@@ -35,14 +37,14 @@
  padding: 10px 0 10px 0;
 }
 
-.spreadsheet tr:nth-child(odd){ 
+.spreadsheet tbody tr:nth-child(odd){ 
   background: #f5f3ed;
 }
 
-.spreadsheet tr:nth-child(even){
+.spreadsheet tbody tr:nth-child(even){
   background: #fffffb;
-}
-
+}     
+     
 @font-face {
   font-family: 'DBHelvethaicaX-55Regular';
   src:  url(data:application/x-font-woff;charset=utf-8;base64,d09GRgABAAAAAJvEABcAAAABJkwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABHREVGAACEKAAAABwA
@@ -756,7 +758,7 @@ font-style: normal;
      <table class="spreadsheet">
        <thead>
          <tr id="rowHeader">
-           <th>สิ้นปีกรมธรรม์</th>
+           <th>สิ้นปี<br>กรมธรรม์</th>
            <th>อายุ</th>
            <th>เบี้ยประกันสะสม</th>
            <th>เงินบำนาญ (%)</th>
