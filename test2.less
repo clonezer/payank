@@ -2,13 +2,14 @@
 @header_text_color: #000000;
 @odd_row_background_color: #f5f3ed;
 @even_row_background_color: #fffffb;
+@highlight_row_background_color: yellow;
 
-@table_width: 890px;
-@table_body_height: 450px;
+@table_width: 880px;
+@table_body_height: 500px;
 @column_1_width: 90px;
 @column_2_width: 100px;
 @column_3_width: 100px;
-@column_4_width: 100px;
+@column_4_width: 90px;
 @column_5_width: 100px;
 @column_6_width: 100px;
 @column_7_width: 100px;
@@ -22,8 +23,8 @@
   -webkit-overflow-scrolling: touch;
   
   th, td {
-    border-left: thin dotted gray;
-    border-bottom: thin dotted gray;      
+    border-left: thin dotted #bbbbbb;
+    border-bottom: thin dotted #bbbbbb;      
     padding: 5px;
     text-align: left;
   }
@@ -55,6 +56,10 @@
     tr:nth-child(even) {
       background-color: @even_row_background_color;
     }
+      
+      tr:hover {
+          background-color: @highlight_row_background_color;
+      }
   }
   
   thead, tfoot {
