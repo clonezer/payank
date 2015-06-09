@@ -67,6 +67,14 @@
 .fixed_headers tbody tr:hover {
   background-color: #ffffaa;
 }
+.fixed_headers tbody td:focus::after,
+.fixed_headers tbody th:focus::after {
+  content: '';
+  background-color: lightblue;
+}
+.fixed_headers tbody td:focus::before {
+  background-color: lightblue;
+}
 .fixed_headers thead,
 .fixed_headers tfoot {
   background-color: #d7d2c6;

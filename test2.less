@@ -57,8 +57,19 @@
     }
       
     tr:hover {
-        background-color: @highlight_row_background_color;
+          background-color: @highlight_row_background_color;
     }
+      
+    td:focus::after,
+    th:focus::after { 
+      content: '';  
+      background-color: lightblue;
+    }
+      
+    td:focus::before {
+      background-color: lightblue;      
+    }
+      
   }
   
   thead, tfoot {
