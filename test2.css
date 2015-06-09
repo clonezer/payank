@@ -65,7 +65,7 @@
   background-color: #fffffb;
 }
 .fixed_headers tbody tr:hover {
-  background-color: yellow;
+  background-color: #ffffaa;
 }
 .fixed_headers thead,
 .fixed_headers tfoot {
